@@ -78,6 +78,12 @@
                 android:resource="@xml/markor_widget" />
         </receiver>
 
+        <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name="other.writeily.widget.WrFilesWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
